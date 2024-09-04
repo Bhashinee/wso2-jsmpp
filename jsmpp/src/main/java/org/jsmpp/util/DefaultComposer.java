@@ -134,7 +134,6 @@ public class DefaultComposer implements PDUComposer {
     public byte[] outbind(int sequenceNumber, String systemId, String password)
             throws PDUStringException {
         StringValidator.validateString(systemId, StringParameter.SYSTEM_ID);
-
         PDUByteBuffer buf = new PDUByteBuffer(SMPPConstant.CID_OUTBIND,
             SMPPConstant.STAT_ESME_ROK, sequenceNumber);
         buf.append(systemId);
